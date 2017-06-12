@@ -19,7 +19,7 @@ class TestRemote extends BaseRemote {
         super(context);
     }
 
-    async echo (msg) {
+    async echo (msg, data) {
         return msg;
     }
 }

@@ -51,23 +51,18 @@ client.start(function(err) {
   // m = false;
   // m = '0';
 
-  client.proxies.user.test.service.echo.toServer('test-server-1', m, 'aaa', function(err, resp, data) {
-  // client.proxies.user.test.service.echo(routeParam, m, 'aaa', function(err, resp, data) {
+  // client.proxies.user.test.service.echo('test-server-1', m, 'aaa', function(err, resp, data) {
+  client.proxies.user.test.service.echo.toServer('test-server-1', m, 'aaa', (err, resp) => {
     if(err) {
       console.error(err.stack);
     }
-
-    // setTimeout(function() {
-      console.log(resp);
-      console.log(data);
-      // console.log(typeof resp)
-      // console.log(resp.toString())
-    // }, 1000);
+    console.log(resp);
   });
 
-  // client.proxies.user.test.service2.echo.toServer('test-server-1', m, 'aaa').then((r) => {
-  //   console.log(r);
-  // }).catch(e => console.log(e));
+  // client.proxies.user.test.service2.echo('test-server-1', m, 'aaa')
+  client.proxies.user.test.service2.echo.toServerAsync('test-server-1', m, 'aaa')
+  .then(r => console.log(r))
+  .catch(e => console.log(e));
 });
 
 process.on('uncaughtException', function(err) {
