@@ -64,6 +64,10 @@ client.start(function(err) {
       // console.log(resp.toString())
     // }, 1000);
   });
+
+  // client.proxies.user.test.service2.echo.toServer('test-server-1', m, 'aaa').then((r) => {
+  //   console.log(r);
+  // }).catch(e => console.log(e));
 });
 
 process.on('uncaughtException', function(err) {
