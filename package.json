@@ -14,6 +14,6 @@
     "mocha": ">=0.0.1",
     "should": ">=0.0.1"
   },
-  "name": "@ejiaoji/pomelo-rpc",
-  "version": "1.0.4"
+  "name": "pomelo-rpc",
+  "version": "2.0.0"
 }
