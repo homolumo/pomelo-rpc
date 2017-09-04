@@ -6,7 +6,7 @@
     "mqtt-connection": "3.0.0",
     "node-uuid": "^1.4.0",
     "pomelo-loader": "0.0.6",
-    "pomelo-logger": "0.1.7",
+    "pomelo-logger": "^0.1.7",
     "stream-pkg": "0.0.5"
   },
   "description": "pomelo-rpc is the low level RPC framework for pomelo project. It contains two parts: client and server.",
